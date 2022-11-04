@@ -15,5 +15,5 @@ public class Node<E> {
     Node left; //左儿子
     Node right; //右儿子
 
-
+    Integer height = 1; //当前节点高度  用来计算平衡因子
 }

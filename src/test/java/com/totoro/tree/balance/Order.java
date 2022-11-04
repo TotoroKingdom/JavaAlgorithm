@@ -1,4 +1,4 @@
-package com.totoro.tree.order;
+package com.totoro.tree.balance;
 
 import com.totoro.tree.Node;
 import org.springframework.util.ObjectUtils;
