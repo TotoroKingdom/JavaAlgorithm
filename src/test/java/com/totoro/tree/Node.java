@@ -1,6 +1,7 @@
 package com.totoro.tree;
 
 import lombok.Data;
+import org.springframework.util.ObjectUtils;
 
 /**
  * @author:totoro
@@ -13,5 +14,6 @@ public class Node<E> {
     E e; //元素
     Node left; //左儿子
     Node right; //右儿子
+
 
 }

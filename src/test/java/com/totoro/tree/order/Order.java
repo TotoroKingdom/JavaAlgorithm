@@ -52,5 +52,46 @@ public class Order {
         System.out.print(root.getE()+" ");
     }
 
+    /**
+     * 二叉搜索树  左儿子小于根节点 右节点大于根节点
+     * @param node
+     * @param e
+     * @return
+     */
+    static Node binarySearchTree(Node node, Integer e){
+        if(ObjectUtils.isEmpty(node)){
+            //如果是空的，插入一个根节点
+            Node<Integer> n = new Node<>();
+            n.setE(e);
+            return n;
+        }else{
+
+            if ((Integer) e > (Integer) node.getE()){
+                //1-如果插入元素大于当前元素，放右边，递归调用
+                Node rightNode = binarySearchTree(node.getRight(), e);
+                node.setRight(rightNode);
+            }else if ((Integer) e < (Integer) node.getE()){
+                //2-如果插入元素小于当前元素，放左边，递归调用
+                Node leftNode = binarySearchTree(node.getLeft(), e);
+                node.setLeft(leftNode);
+            }
+            return node;
+        }
+    }
+
+    /**
+     * 平衡二叉树
+     * 1-平衡二叉树是二叉搜索树
+     * 2-子节点也是平衡二叉树
+     *
+     * @param node
+     * @param i
+     * @return
+     */
+    static Node balanceBinaryTree(Node node, Integer i){
+
+        return null;
+    }
+
 
 }
